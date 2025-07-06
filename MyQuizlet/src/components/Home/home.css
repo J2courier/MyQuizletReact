@@ -1,0 +1,8 @@
+
+.home {
+    border:solid 1px #4438F6;
+    padding: 1.2rem;
+    width: 800px;
+    border-radius: 12px;
+    background-color: var(--container-color);
+}
