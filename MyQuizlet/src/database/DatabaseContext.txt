@@ -1,0 +1,25 @@
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)
+
+users VALUES (id = 1, username = j2courier, password = json22, created_at = 2025-07-06 22:39:32.013486)
+
+CREATE TABLE flashcard_sets (
+    id SERIAL PRIMARY KEY,
+    user_id INT REFERENCES users(id),
+    title VARCHAR(255),
+    description TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE flashcards (
+    id SERIAL PRIMARY KEY,
+    set_id INT REFERENCES flashcard_sets(id),
+    term TEXT NOT NULL,
+    definition TEXT NOT NULL
+);

@@ -1,7 +1,8 @@
-import "./home.css"
+import { useState, useEffect } from "react";
+import axios from "axios";
+import "./home.css";
 
 export default function Home() {
-
 
   return (
     <div className="home">
@@ -18,18 +19,17 @@ export default function Home() {
         <div className="term-container">
           <span></span>
         </div>
-
       </div>
 
       <div className="stat-container">
         <div className="info-container">
-           <ul>
-            <li><p>Avg Score Per Quiz</p>  </li>
-            <li><p>Highest Score</p>  </li>
-            <li><p>Lowest Score</p>  </li>
-            <li><p>Most Missed Topic</p>  </li>
-            <li><p>Total Flashcard Sets</p>  </li>
-            <li><p>Total Quiz Taken</p> </li>
+          <ul>
+            <li><p>Avg Score Per Quiz</p></li>
+            <li><p>Highest Score</p></li>
+            <li><p>Lowest Score</p></li>
+            <li><p>Most Missed Topic</p></li>
+            <li><p>Total Flashcard Sets</p></li>
+            <li><p>Total Quiz Taken</p></li>
           </ul>
         </div>
         <div className="numeric-stat-container">
@@ -42,12 +42,8 @@ export default function Home() {
             <li><span> </span></li>
           </ul>
         </div>
-        <div className="radial-progress-bar">
-
-        </div>
+        <div className="radial-progress-bar"></div>
       </div>
-
     </div>
-  )
-
+  );
 }
