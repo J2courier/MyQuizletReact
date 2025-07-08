@@ -14,10 +14,22 @@ export async function createFlashcardSets(req, res) {
     }
 }
 
+export async function getFlashcardSets( req, res ){
+    try{
+        const query = `SELECT id, title, description, created_at FROM flashcard_sets ORDER BY created_at DESC`;
+        const rs = await pool.query(query);
+        res.json(rs.rows); 
+    } catch (err) {
+        console.error("Error Fetching flashcard sets", err);
+        res.status(500).json({error: "Internal Server Error"});
+    }
+}
+
 export async function deleteSet(req, res) {
     try {
         const { id } = req.params;
-        await pool.query("DELETE FROM flashcard_sets WHERE id = $1", [id]);
+        const query = `DELETE FROM flashcard_sets WHERE id = $1`;
+        const rs = await pool.query(query, [id]);
         res.sendStatus(204); 
     } catch (err) {
         res.status(500).send("Server error");

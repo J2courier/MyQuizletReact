@@ -1,7 +1,9 @@
 import express from 'express';
-import { createFlashcardSets } from '../controllers/FlashcardSetsController.js';
+import { createFlashcardSets, getFlashcardSets } from '../controllers/FlashcardSetsController.js';
 
 const router = express.Router();
+
+router.get('/', getFlashcardSets);
 router.post('/', createFlashcardSets);
 
 export default router;

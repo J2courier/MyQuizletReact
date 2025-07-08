@@ -15,7 +15,25 @@ form, .flashcard-input{
 form input, textarea, .flashcard-input input, .flashcard-input textarea {
     width: 95%;
     padding: 1.3em;
-    
+    background-color: #421b60;
+    border: solid 1px #7262FF ;
+    outline: #7262FF;
+}
+
+button {
+  background-color: #560992;
+  color: rgb(209, 209, 209);
+  border: 1px solid #7262FF;
+  border-radius: 4px;
+  padding: 0.6em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #7262FF;
+  border: solid 1px #7262FF;
+  color: white;
 }
 
 form button {
@@ -43,4 +61,9 @@ form button:active {
 form button:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(114, 98, 255, 0.5);
+}
+
+.flashcard-set-btn {
+  display: flex;
+  gap: 0.2em;
 }

@@ -2,8 +2,9 @@
 import { useState } from "react";
 import axios from "axios";
 import "./AddFlashcard.css";
+// import "./flashcard.jsx";
 
-export default function AddFlashcard() {
+export default function AddFlashcard( {onSetCreated, closeAddFlashcard} ) {
 
   const [formData, setFormData] = useState({ title: "", description: "" });
   const [setId, setSetId] = useState(null);
@@ -18,7 +19,7 @@ export default function AddFlashcard() {
     e.preventDefault();
     try {
       const res = await axios.post("http://localhost:3000/api/flashcard-sets", formData);
-      setSetId(res.data.id); // store set id
+      setSetId(res.data.id); 
       alert(`Created set: ${res.data.title}`);
     } catch (error) {
       alert("Failed to create flashcard set");
@@ -73,7 +74,9 @@ export default function AddFlashcard() {
           onChange={handleSetChange}
           rows="3"
         />
-        <button type="submit" disabled={setId !== null}>Create Set</button>
+          {setId === null && (
+            <button type="submit">Create Set</button>
+          )}
       </form>
 
       {setId && (
@@ -95,8 +98,12 @@ export default function AddFlashcard() {
               />
             </div>
           ))}
-          <button onClick={addFlashcard}>+ Add Another Card</button>
-          <button onClick={submitFlashcards}>Submit Flashcards</button>
+          <div className="flashcard-set-btn">
+            <button onClick={addFlashcard}> Add More</button>
+            <button onClick={submitFlashcards}>Save</button>
+            <button onClick={closeAddFlashcard}>Close</button>
+          </div>
+          
         </>
       )}
     </div>

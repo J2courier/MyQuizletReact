@@ -34,10 +34,11 @@
 
 .nav-button:active {
   background-color: #8C00F8;
+  color: white;
 }
 
-.nav-button:focus {
+/* .nav-button:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(114, 98, 255, 0.5);
-}
+} */
 

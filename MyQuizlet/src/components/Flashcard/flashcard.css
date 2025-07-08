@@ -4,10 +4,149 @@
     width: 800px;
     border-radius: 12px;
     background-color: #221C2D;
+    /* display: flex;
+    flex-direction: column;*/
+    gap: 1.2em; 
+}
+
+.flashcard-sets-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+}
+
+.flashcard-header button {
+    background-color: #6e0db9;
+    color: rgb(209, 209, 209);
+    border: 1px solid #6e0db9;
+    border-radius: 4px;
+    padding: 0.7em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.flashcard-header {
+    display: flex;
+    gap: 28.2em;
+    align-items: center;
+}
+
+.flashcard-header button:hover {
+    background-color: #421b60;
+    
 }
 
 
+.default-content-container {
+    /* border: solid 1px white; */
+    display: flex;
+    flex-direction: column;
+    gap: 1.3em;
+}
 
+.flashcard-sets-container {
+    /* border: solid 1px white; */
+    /* padding: 1.1em; */
+    /* height: 40%; */
+}
+
+.sets-container {
+    /* border: solid 1px white; */
+    /* padding: 0.7em; */
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+    height: 500px;
+    border-radius: 6px;
+    overflow-y: scroll;
+}
+
+.set-card {
+    /* border:solid 1px white; */
+    padding: 0.9em;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    /* height: 40px; */
+    /* gap:-10px; */
+    transition: all 0.3s ease-in;
+}
+
+.set-card:hover {
+    background-color: #421b60;
+    /* border:solid 1px #4438F6; */
+
+}
+.set-card h4 {
+    /* border: solid 1px white; */
+}
+
+.set-title-description {
+    /* border: solid 1px blue; */
+    display: flex;
+    flex-direction: column;
+}
+
+.set-title-description span:nth-child(2), .set-meta {
+    color: rgb(169, 169, 169);
+}
+.set-meta {
+    display: flex;
+    gap: 32.2em;
+}
+
+
+.set-meta button {
+    background-color: #560992;
+    color: rgb(209, 209, 209);
+    border: 1px solid #7262FF;
+    border-radius: 4px;
+    padding: 0.4em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.set-meta button:hover {
+    background-color: #8C00F8;
+    color: white;
+}
+
+.set-meta button:active {
+   background-color: #8C00F8;
+}
+
+.set-meta button:active {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(114, 98, 255, 0.5);
+}
+
+.last-viewed-set-container {
+    padding: 20px;
+    border:solid 1px #4438F6;
+    border-radius: 6px;
+}
+
+.status-filters {
+    display: flex;
+    gap: 0.3em;
+}
+
+.status-filters button {
+    background-color: #560992;
+    color: rgb(209, 209, 209);
+    border: 1px solid #7262FF;
+    border-radius: 4px;
+    padding: 0.4em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.status-filters button:hover {
+    background-color: #8C00F8;   
+}
+.status-filters button:active {
+   background-color: #8C00F8;
+}
 
 /* modal section design */
 .modal-overlay {
