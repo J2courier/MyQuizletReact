@@ -1,0 +1,56 @@
+.flashcard-content-container {
+    border:solid 1px #4438F6;
+    padding: 1.2rem;
+    width: 800px;
+    border-radius: 12px;
+    background-color: #221C2D;
+}
+
+
+
+
+/* modal section design */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: var(--container-color, #221C2D);
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    color: var(--text-color, white);
+}
+
+.modal-content button {
+    background-color: var(--primary-color, #560992);
+    color: white;
+    border: 2px solid var(--border-color, #7262FF);
+    border-radius: 8px;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+}
+
+.modal-content button:hover {
+    background-color: var(--hover-color, #8C00F8);
+}
