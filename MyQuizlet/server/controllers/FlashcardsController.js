@@ -20,3 +20,18 @@ export async function createFlashcard(req, res) {
         res.status(500).send("server error")
     }
 }
+
+export async function getFlashcardsBySet(req, res) {
+    const { set_id } = req.params;
+
+    try {
+        const rs = await pool.query(
+            `SELECT * FROM flashcards WHERE set_id = $1 ORDER BY id`,
+            [set_id]
+        );
+        res.status(200).json(rs.rows);
+    } catch (err) {
+        console.error("Error fetching flashcards by set", err);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+}
