@@ -1,13 +1,21 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Navbar from './components/navbar'
 import Home from './components/Home/home'
 import Flashcard from './components/Flashcard/flashcard'
 import Quizzer from './components/Quizzer/quizzer'
 import Settings from './components/Settings/settings'
+import Loading from './loading.jsx';
 import './App.css'
+import './index.css'
 
 function App() {
   const [activeComponent, setActiveComponent] = useState('home')
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 5000)
+    return () => clearTimeout(timer)
+  }, [])
 
   const renderComponent = () => {
     switch (activeComponent) {
@@ -24,14 +32,18 @@ function App() {
     }
   }
 
+  if (loading) {
+    return <Loading />
+  }
+
   return (
     <div className="app">
       <Navbar setActiveComponent={setActiveComponent} />
       <div className="content">
         {renderComponent()}
+        <div className="side-bar"></div>
       </div>
     </div>
-      
   )
 }
 
