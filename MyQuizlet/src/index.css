@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #141313;
+  background-color: #1D1E20;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,8 +15,8 @@
 
    
   /* --border-clr:#312178;   */
-  --setcard-clr: #401065;
-  --setcard-hover: #500888;
+  --setcard-clr: #313236;
+  --setcard-hover: #5c1c8e;
 }
 
 a {

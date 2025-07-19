@@ -11,7 +11,12 @@ export default function Home() {
       </div>
       <div className="daily-quest-container">
         <ul>
-          <li></li>
+          {
+          /* in the daily quest, one flashcard will be displayed here, those will be displayed
+          are the flashcard set that is not yet completed, if all sets are is not complete yet only
+          one of the set, this will have a rotation for displaying by adding duration of 24hrs before
+          displaying other uncompleted set*/
+          }
         </ul>
       </div>
 

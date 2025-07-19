@@ -19,6 +19,7 @@
     display: flex;
     flex-direction: column;
     gap: 1.2em;
+    /* border: solid 1px white; */
 }
 
 .flashcard-header {
@@ -29,6 +30,7 @@
     flex-wrap: wrap;
     gap: 0.5em;
     transition: all 0.3s ease-in-out;
+    /* border: solid 1px white; */
 }
 
 .flashcard-header h2 {
@@ -71,7 +73,7 @@
 } */
 
 .sets-container {
-    /* border: solid 1px white; */
+    /* border: solid 1px purple; */
     padding: 0.7em;
     display: flex;
     flex-direction: column;
@@ -80,12 +82,12 @@
     border-radius: 6px;
     overflow-y: scroll;
 }
-
+/* 
 .sets-container:hover {
     box-shadow: inset 0 0 5px 5px rgba(32, 47, 72, 0.35);
-                /* inset 0 0 12px 10px rgba(80, 8, 136, 0.18); */
+                
     transition: box-shadow 0.3s ease;
-}
+} */
 
 .set-card {
     /* border:solid 1px white; */
@@ -96,6 +98,8 @@
     /* height: 40px; */
     /* gap:-10px; */
     background-color: var(--setcard-clr);
+    /* border: solid 1px rgb(101, 101, 101); */
+    box-shadow: 4px 4px 2px rgb(27, 27, 27);
     color: rgb(170, 170, 170);
 
     transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
@@ -103,7 +107,7 @@
 
 .set-card:hover {
     background-color: var(--setcard-hover);
-    /* border:solid 1px #4438F6; */
+    /* border:solid 1px #9732e5; */
     color: white;
 
 }
@@ -152,6 +156,7 @@
     padding: 20px;
     /* border:solid 1px #7066ff; */
     border-radius: 6px;
+    /* box-shadow: 2px 2px 4px black; */
 }
 
 .status-filters {
@@ -288,6 +293,7 @@
   color: rgb(170, 170, 170);
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 2px 2px 4px rgb(16, 16, 16);
 }
 
 .recent-set-card:hover {

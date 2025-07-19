@@ -75,13 +75,13 @@ export default function FlashcardViewMode({ setId, onBack }) {
                             <div className="card-front">
                                 <div className="card-content">
                                     <strong>{flashcards[currentIndex].term}</strong>
-                                    <div className="hint">Click to flip</div>
+                                   
                                 </div>
                             </div>
                             <div className="card-back">
                                 <div className="card-content">
                                     {flashcards[currentIndex].definition}
-                                    <div className="hint">Click to flip</div>
+                                    
                                 </div>
                             </div>
                         </div>

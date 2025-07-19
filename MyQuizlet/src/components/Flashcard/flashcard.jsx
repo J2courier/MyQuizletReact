@@ -115,7 +115,7 @@ export default function Flashcard() {
             <h2>
               {flashcardSets.find((set) => set.id === selectedSetId)?.title || "Flashcard Set"}
             </h2>
-            <button onClick={() => setSelectedSetId(null)}>Back to Sets</button>
+            <button onClick={() => setSelectedSetId(null)}>X</button>
           </>
         ) : null}
       </div>
